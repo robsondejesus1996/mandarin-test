@@ -86,7 +86,7 @@
       }
 
       /*teste noticia principal*/
-      .news-card-principal{
+      .news-card-principal {
         width: 80%;
         margin: 20px auto;
         border: 1px solid #ccc;
@@ -165,7 +165,14 @@
 
       /*Fim teste noticia principal*/
 
-     
+      @media (max-width: 630px){
+        #imagem_we_design{
+          display: none;
+        }
+        .vertical-bar{
+          display: none;
+        }
+      }
 
       @media (max-width: 1400px) {
         .nav-description {
@@ -257,35 +264,46 @@
 
     <!--Conteúdo Noticia principal-->
     <div class="news-card-principal">
-        <img src="imagens/coloridas/6.png" id="imagem_principal_noticias" alt="Imagem Principal" />
-        <h1>asdasdsNRF 2020: conheça os top 5 assuntos do evento.</h1>
-        <p>
-          O maior evento sobre varejo do mundo mostrado as tendências,
-          oportunidades e inovações para o setor
-        </p>
-        <p class="source">Fonte: CMO ADOBE</p>
-        <div class="separator"></div>
-      </div>
+      <img
+        src="imagens/coloridas/6.png"
+        id="imagem_principal_noticias"
+        alt="Imagem Principal"
+      />
+      <h1>asdasdsNRF 2020: conheça os top 5 assuntos do evento.</h1>
+      <p>
+        O maior evento sobre varejo do mundo mostrado as tendências,
+        oportunidades e inovações para o setor
+      </p>
+      <p class="source">Fonte: CMO ADOBE</p>
+      <div class="separator"></div>
+    </div>
 
     <!--Conteúdo Noticia-->
 
     <div class="news-container">
-        <div class="news-card">
-          <img src="imagens/coloridas/7.png" alt="Notícia 1" />
-          <h2 class="news-title">
-            Petição para colocar Kobe Bryant no logo da NBA
-          </h2>
-          <p class="news-description">Fonte: Daily Mail</p>
-          <div class="separator"></div>
-        </div>
-        <div class="news-card">
-          <img src="imagens/coloridas/8.png" alt="Notícia 2" />
-          <h2 class="news-title">WhatsApp terá função de pagamentos em 2020</h2>
-          <p class="news-description">Fonte: Proxxima</p>
-          <div class="separatorGreen"></div>
-        </div>
+      <div class="news-card">
+        <img src="imagens/coloridas/7.png" alt="Notícia 1" />
+        <h2 class="news-title">
+          Petição para colocar Kobe Bryant no logo da NBA
+        </h2>
+        <p class="news-description">Fonte: Daily Mail</p>
+        <div class="separator"></div>
       </div>
+      <div class="news-card">
+        <img src="imagens/coloridas/8.png" alt="Notícia 2" />
+        <h2 class="news-title">WhatsApp terá função de pagamentos em 2020</h2>
+        <p class="news-description">Fonte: Proxxima</p>
+        <div class="separatorGreen"></div>
+      </div>
+    </div>
 
-    <!--fim conteudo noticias-->
+    <!--Conteúdo da barra laranja-->
+    <div class="section-bar">
+      <div class="section-images">
+        <img src="imagens/9.png" id="imagem_mandarin" alt="Imagem 1" />
+        <div class="vertical-bar"></div>
+        <img src="imagens/10.png" id="imagem_we_design" alt="Imagem 2" />
+      </div>
+    </div>
   </body>
 </html>

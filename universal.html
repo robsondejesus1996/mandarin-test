@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
       body {
+        font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
       }
 
       .nav-section {
@@ -82,7 +86,7 @@
       }
 
       /*teste noticia principal*/
-      .news-card {
+      .news-card-principal{
         width: 80%;
         margin: 20px auto;
         border: 1px solid #ccc;
@@ -90,26 +94,78 @@
         overflow: hidden;
         margin-top: 50px;
       }
-
-      #imagem_principal {
+      #imagem_principal_noticias {
         width: 100%;
         height: auto;
         display: block;
       }
-      h1 {
+      .news-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        max-width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .news-card {
+        width: 34%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+      .news-card img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+      }
+      .news-title {
+        text-align: left;
         font-size: 24px;
         font-weight: bold;
-        text-align: left;
       }
-      p {
+      .news-description {
         font-size: 16px;
+        color: #888;
         text-align: left;
       }
-      .source {
-        color: #666;
-        text-align: left;
+      .separator {
+        width: 49%;
+        border-top: 5px solid blue;
       }
+      .separatorGreen {
+        width: 50%;
+        border-top: 5px solid green;
+      }
+      .section-bar {
+        width: 100%;
+        height: 100px;
+        background-color: rgb(255, 81, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        box-sizing: border-box;
+        margin-top: 300px;
+      }
+      .section-images {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .section-images img {
+        max-width: 100%;
+        height: auto;
+      }
+      .vertical-bar {
+        width: 0.1px;
+        height: 50px;
+        background-color: white;
+      }
+
       /*Fim teste noticia principal*/
+
+     
 
       @media (max-width: 1400px) {
         .nav-description {
@@ -149,8 +205,6 @@
         #image_seta {
           display: none;
         }
-
-       
       }
     </style>
   </head>
@@ -202,18 +256,36 @@
     </section>
 
     <!--Conteúdo Noticia principal-->
-    <div class="news-card">
-      <img
-        src="imagens/coloridas/6.png"
-        id="imagem_principal"
-        alt="Imagem Principal"
-      />
-      <h1>NRF 2020: conheça os top 5 assuntos do evento.</h1>
-      <p>
-        O maior evento sobre varejo do mundo mostrado as tendências,
-        oportunidades e inovações para o setor
-      </p>
-      <p class="source">Fonte: CMO ADOBE</p>
-    </div>
+    <div class="news-card-principal">
+        <img src="imagens/coloridas/6.png" id="imagem_principal_noticias" alt="Imagem Principal" />
+        <h1>asdasdsNRF 2020: conheça os top 5 assuntos do evento.</h1>
+        <p>
+          O maior evento sobre varejo do mundo mostrado as tendências,
+          oportunidades e inovações para o setor
+        </p>
+        <p class="source">Fonte: CMO ADOBE</p>
+        <div class="separator"></div>
+      </div>
+
+    <!--Conteúdo Noticia-->
+
+    <div class="news-container">
+        <div class="news-card">
+          <img src="imagens/coloridas/7.png" alt="Notícia 1" />
+          <h2 class="news-title">
+            Petição para colocar Kobe Bryant no logo da NBA
+          </h2>
+          <p class="news-description">Fonte: Daily Mail</p>
+          <div class="separator"></div>
+        </div>
+        <div class="news-card">
+          <img src="imagens/coloridas/8.png" alt="Notícia 2" />
+          <h2 class="news-title">WhatsApp terá função de pagamentos em 2020</h2>
+          <p class="news-description">Fonte: Proxxima</p>
+          <div class="separatorGreen"></div>
+        </div>
+      </div>
+
+    <!--fim conteudo noticias-->
   </body>
 </html>

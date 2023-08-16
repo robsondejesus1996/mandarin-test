@@ -1,98 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
 
-  .nav-section {
-    background-color: #FE2E2E; /* Cor marrom */
-    padding: 20px;
-    text-align: center;
-    color: white;
-    position: relative; /* Para o posicionamento das descrições */
-    height: 250px;
-  }
+      .nav-section {
+        background-color: #fe2e2e; /* Cor marrom */
+        padding: 20px;
+        text-align: center;
+        color: white;
+        position: relative; /* Para o posicionamento das descrições */
+        height: 250px;
+      }
 
-  .nav-description {
-    font-size: 24px; /* Tamanho da fonte aumentado */
-    margin-right: 350px;
-    margin-top: 25px;
-    top: 0;
-    right: 0;
-    text-align: right;
-    font-weight: bold; /* Negrito adicionado */
-    
-  }
+      .nav-description {
+        font-size: 24px; /* Tamanho da fonte aumentado */
+        margin-right: 350px;
+        margin-top: 25px;
+        top: 0;
+        right: 0;
+        text-align: right;
+        font-weight: bold; /* Negrito adicionado */
+      }
 
-  .edicao{
-    font-size: 14px; /* Tamanho da fonte aumentado */
-    top: 0;
-    right: 0;
-    text-align: right;
-    margin-right: 350px;
-    margin-top: -10px;
-  }
+      .edicao {
+        font-size: 14px; /* Tamanho da fonte aumentado */
+        top: 0;
+        right: 0;
+        text-align: right;
+        margin-right: 350px;
+        margin-top: -10px;
+      }
 
-  .nav-image {
-    max-width: 100%;
-    height: auto;
-    margin: 10px;
-  }
+      .nav-image {
+        max-width: 100%;
+        height: auto;
+        margin: 10px;
+      }
 
-  #image_mend{
-    position: absolute;
-    margin-left: -800px;
-  }
-  #imagem_bolinhas{
-    position: absolute;
-    margin-left: -300px;
-    margin-top: 170px;
-  }
+      #image_mend {
+        position: absolute;
+        margin-left: -800px;
+      }
+      #imagem_bolinhas {
+        position: absolute;
+        margin-left: -300px;
+        margin-top: 170px;
+      }
 
-  #mulher{
-    position: absolute;
-    margin-top: 55px;
-    
-  }
-  #imagem_seta_direita{
-    position: absolute;
-    margin-top: 55px;
-    margin-top: -10px;
-    margin-left: -10px;
-  }
+      #mulher {
+        position: absolute;
+        margin-top: 55px;
+      }
+      #imagem_seta_direita {
+        position: absolute;
+        margin-top: 55px;
+        margin-top: -10px;
+        margin-left: -10px;
+      }
 
-  #image_linha{
-    position: absolute;
-    margin-left: 380px;
-    margin-top: -10px;
-  }
-  #image_seta{
-    position: absolute;
-    margin-left: 550px;
-    margin-top: -10px;
-  }
-</style>
-</head>
-<body>
-  <section class="nav-section">
-    
-    
+      #image_linha {
+        position: absolute;
+        margin-left: 380px;
+        margin-top: -10px;
+      }
+      #image_seta {
+        position: absolute;
+        margin-left: 550px;
+        margin-top: -10px;
+      }
 
-    <img class="nav-image" id="image_mend" src="../imagens/1.png" alt="Image 1">
-    <img class="nav-image" id="imagem_bolinhas"  src="../imagens/teste.png" alt="Image 2">
-    <img class="nav-image" id="imagem_seta_direita" src="../imagens/3.png" alt="Image 3">
-    <img class="nav-image" id="mulher" src="../imagens/11.png" alt="Image 5">
-    <img class="nav-image" id="image_seta" src="../imagens/4.png" alt="Image 3">
-    <p class="nav-description">NFR 2020, <br/> Kobe Bryant e <br/>WhatsApp Payment </p>
-    
-    <p class="edicao">edição 06</p>
-    <img class="nav-image" id="image_linha" src="../imagens/5.png" alt="Image 5">
-  </section>
-</body>
+      @media (max-width: 414px) {
+        .nav-description {
+          font-size: 17px; 
+          font-weight: bold; 
+          text-align: center;
+          margin-top: 100px;
+        }
+        .edicao {
+          display: none;
+        }
+
+        #image_mend {
+          display: none;
+        }
+        #imagem_bolinhas {
+          display: none;
+        }
+
+        #mulher {
+          display: flex;
+          margin-left: 40px;
+          
+        }
+        #imagem_seta_direita {
+          display: none;
+        }
+
+        #image_linha {
+          display: none;
+        }
+        #image_seta {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="nav-section">
+      <img
+        class="nav-image"
+        id="image_mend"
+        src="../imagens/1.png"
+        alt="Image 1"
+      />
+      <img
+        class="nav-image"
+        id="imagem_bolinhas"
+        src="../imagens/teste.png"
+        alt="Image 2"
+      />
+      <img
+        class="nav-image"
+        id="imagem_seta_direita"
+        src="../imagens/3.png"
+        alt="Image 3"
+      />
+      <img
+        class="nav-image"
+        id="mulher"
+        src="../imagens/11.png"
+        alt="Image 5"
+      />
+      <img
+        class="nav-image"
+        id="image_seta"
+        src="../imagens/4.png"
+        alt="Image 3"
+      />
+      <p class="nav-description">
+        NFR 2020, <br />
+        Kobe Bryant e <br />WhatsApp Payment
+      </p>
+
+      <p class="edicao">edição 06</p>
+      <img
+        class="nav-image"
+        id="image_linha"
+        src="../imagens/5.png"
+        alt="Image 5"
+      />
+    </section>
+  </body>
 </html>

@@ -13,6 +13,22 @@
         flex-direction: column;
         min-height: 100vh;
       }
+      .footer {
+        background-color: white;
+        color: black;
+        text-align: center;
+        padding: 0;
+        bottom: 0;
+        width: 100%;
+        
+      }
+      .footer p {
+        margin: 0;
+      }
+      .footer a {
+        color: black;
+        text-decoration: underline;
+      }
 
       .nav-section {
         background-color: #fe2e2e; /* Cor marrom */
@@ -165,11 +181,11 @@
 
       /*Fim teste noticia principal*/
 
-      @media (max-width: 630px){
-        #imagem_we_design{
+      @media (max-width: 630px) {
+        #imagem_we_design {
           display: none;
         }
-        .vertical-bar{
+        .vertical-bar {
           display: none;
         }
       }
@@ -304,6 +320,15 @@
         <div class="vertical-bar"></div>
         <img src="imagens/10.png" id="imagem_we_design" alt="Imagem 2" />
       </div>
+    </div>
+
+    <!--Conteúdo Footer-->
+    <div class="footer">
+      <p>
+        Copyright © Mandarin. Todos os direitos reservados. <br />
+        Caso não deseje mais receber nossos e-mails, por favor
+        <a href="#">clique aqui</a>.
+      </p>
     </div>
   </body>
 </html>

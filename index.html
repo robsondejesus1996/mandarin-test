@@ -5,9 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
       body {
+        font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      .footer {
+        background-color: white;
+        color: black;
+        text-align: center;
+        padding: 0;
+        bottom: 0;
+        width: 100%;
+        
+      }
+      .footer p {
+        margin: 0;
+      }
+      .footer a {
+        color: black;
+        text-decoration: underline;
       }
 
       .nav-section {
@@ -81,19 +101,58 @@
         margin-top: -10px;
       }
 
-      .footer {
-        background-color: white;
-        color: black;
-        text-align: center;
-        padding: 0;
-        position: absolute;
-        bottom: 0;
+      /*teste noticia principal*/
+      .news-card-principal {
+        width: 80%;
+        margin: 20px auto;
+        border: 1px solid #ccc;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        margin-top: 50px;
+      }
+      #imagem_principal_noticias {
         width: 100%;
+        height: auto;
+        display: block;
       }
-      .footer a {
-        color: black;
+      .news-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        max-width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
       }
-
+      .news-card {
+        width: 34%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+      .news-card img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+      }
+      .news-title {
+        text-align: left;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .news-description {
+        font-size: 16px;
+        color: #888;
+        text-align: left;
+      }
+      .separator {
+        width: 49%;
+        border-top: 5px solid blue;
+      }
+      .separatorGreen {
+        width: 50%;
+        border-top: 5px solid green;
+      }
       .section-bar {
         width: 100%;
         height: 100px;
@@ -118,6 +177,17 @@
         width: 0.1px;
         height: 50px;
         background-color: white;
+      }
+
+      /*Fim teste noticia principal*/
+
+      @media (max-width: 630px) {
+        #imagem_we_design {
+          display: none;
+        }
+        .vertical-bar {
+          display: none;
+        }
       }
 
       @media (max-width: 1400px) {
@@ -159,39 +229,10 @@
           display: none;
         }
       }
-
-      @media (max-width: 630px) {
-        #imagem_we_design{
-            display: none;
-        }
-        .section-bar {
-        width: 100%;
-        height: 100px;
-        background-color: rgb(255, 81, 0);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-        box-sizing: border-box;
-        margin-top: 200px;
-      }
-      .section-images {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-      }
-      .section-images img {
-        max-width: 100%;
-        height: auto;
-      }
-      .vertical-bar {
-        display: none;
-      }
-      }
     </style>
   </head>
   <body>
-    <!--Conteúdo Sections Principal Menu-->
+    <!--Conteúdo section navbar-->
     <section class="nav-section">
       <img
         class="nav-image"
@@ -211,7 +252,12 @@
         src="../imagens/3.png"
         alt="Image 3"
       />
-      <img class="nav-image" id="mulher" src="imagens/11.png" alt="Image 5" />
+      <img
+        class="nav-image"
+        id="mulher"
+        src="../imagens/11.png"
+        alt="Image 5"
+      />
       <img
         class="nav-image"
         id="image_seta"
@@ -232,10 +278,45 @@
       />
     </section>
 
-    <!--Conteúdo Barra imagens-->
+    <!--Conteúdo Noticia principal-->
+    <div class="news-card-principal">
+      <img
+        src="imagens/coloridas/6.png"
+        id="imagem_principal_noticias"
+        alt="Imagem Principal"
+      />
+      <h1>asdasdsNRF 2020: conheça os top 5 assuntos do evento.</h1>
+      <p>
+        O maior evento sobre varejo do mundo mostrado as tendências,
+        oportunidades e inovações para o setor
+      </p>
+      <p class="source">Fonte: CMO ADOBE</p>
+      <div class="separator"></div>
+    </div>
+
+    <!--Conteúdo Noticia-->
+
+    <div class="news-container">
+      <div class="news-card">
+        <img src="imagens/coloridas/7.png" alt="Notícia 1" />
+        <h2 class="news-title">
+          Petição para colocar Kobe Bryant no logo da NBA
+        </h2>
+        <p class="news-description">Fonte: Daily Mail</p>
+        <div class="separator"></div>
+      </div>
+      <div class="news-card">
+        <img src="imagens/coloridas/8.png" alt="Notícia 2" />
+        <h2 class="news-title">WhatsApp terá função de pagamentos em 2020</h2>
+        <p class="news-description">Fonte: Proxxima</p>
+        <div class="separatorGreen"></div>
+      </div>
+    </div>
+
+    <!--Conteúdo da barra laranja-->
     <div class="section-bar">
       <div class="section-images">
-        <img src="imagens/9.png" alt="Imagem 1" />
+        <img src="imagens/9.png" id="imagem_mandarin" alt="Imagem 1" />
         <div class="vertical-bar"></div>
         <img src="imagens/10.png" id="imagem_we_design" alt="Imagem 2" />
       </div>
